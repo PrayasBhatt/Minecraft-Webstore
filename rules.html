@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .img {
+      width: 400px;
+      height: 400px;
+    }
+
+    #navbar {
+      background-color: #27272A;
+    }
+
+    .topbar {
+      background-color: #3cff00;
+      background-image: url(https://cdn.discordapp.com/attachments/1132702592510742589/1228206682564333598/1695699714965.png?ex=662b339c&is=6618be9c&hm=ff8e06f7428cc17d7cf45a6dfd3d65381766df35ab9ef01e1ff3b1487e5a8bd2&);
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+    }
+
+
+
+    #coloryellow {
+      color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- TOP BAR START -->
+  <div class="topbar">
+    <div class="container mx-auto px-4 py-2" id="navbar">
+      <div class="flex justify-between items-center text-white">
+        <div class="flex space-x-4">
+          <button id="copyButton"
+            class="bg-purple-700 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-purple-800 flex items-center">
+            <span>play.nepixmc.fun</span>
+          </button>
+        </div>
+        <button class="bg-yellow-400 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-yellow-500 flex items-center">
+          <span><a href="https://discord.gg/C9SqPBwNus">Join Our Discord</a></span>
+        </button>
+      </div>
+    </div>
+    <div class="container mx-auto px-4 py-2">
+      <div class="flex justify-between items-center">
+        <div class="img"></div>
+      </div>
+    </div>
+    <div class="container mx-auto px-4 py-2" id="navbar">
+      <div class="flex justify-center items-center text-white">
+        <div class="flex space-x-4">
+          <button class="bg-purple-800 py-2 px-4 rounded-lg shadow-lg hover:bg-purple-900"><a
+              href="index.html">Home</a></button>
+          <button class="bg-purple-800 py-2 px-4 rounded-lg shadow-lg hover:bg-purple-900"><a
+              href="vote.html">Vote</a></button>
+          <div class="ml-4"> <!-- Added a margin to create a gap between navbar items and the Store button -->
+            <button
+              class="bg-yellow-400 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-yellow-500 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h13M3 11h13m-4 4h4" />
+              </svg>
+              <span><a href="store.html">Store</a></span>
+            </button>
+          </div>
+          <button class="bg-purple-800 py-2 px-4 rounded-lg shadow-lg hover:bg-purple-900"><a
+              href="staff.html">Staff</a></button>
+          <button class="bg-purple-800 py-2 px-4 rounded-lg shadow-lg hover:bg-purple-900"><a
+              href="rules.html">Rules</a></button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- TOP BAR END -->
+  <!--Rules Start -->
+  <div class="overflow-x-auto">
+    <table class="min-w-full table-auto text-left text-sm text-zinc-800 dark:text-zinc-200">
+      <thead class="text-xs uppercase bg-zinc-100 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-400">
+        <tr>
+          <th class="p-4">Rule (Disallowed)</th>
+          <th class="p-4">First Offense</th>
+          <th class="p-4">Second Offense</th>
+          <th class="p-4">Third Offense</th>
+          <th class="p-4">Fourth Offense</th>
+          <th class="p-4">Fifth Offense</th>
+          <th class="p-4">Sixth Offense</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b text-black dark:border-zinc-700">
+          <td class="p-4"><strong>Inappropriate Names</strong><br><small>You can’t use inappropriate names</small></td>
+          <td class="p-4">Warning</td>
+          <td class="p-4">Warning</td>
+          <td class="p-4">Mute (3 Days)</td>
+          <td class="p-4">Mute (7 Days)</td>
+          <td class="p-4">Mute (14 Days)</td>
+          <td class="p-4">-</td>
+        </tr>
+        <tr class="border-b bg-zinc-50 text-black   dark:border-zinc-700">
+          <td class="p-4"><strong>Sending Links</strong><br><small>Sending random or unnecessary links isn’t
+              allowed</small></td>
+          <td class="p-4">Warning</td>
+          <td class="p-4">Warning</td>
+          <td class="p-4">Mute (3 Days)</td>
+          <td class="p-4">Mute (7 Days)</td>
+          <td class="p-4">Mute (14 Days)</td>
+          <td class="p-4">-</td>
+        </tr>
+        <tr class="border-b text-black  dark:border-zinc-700">
+          <td class="p-4"><strong>Abusive Language </strong><br><small>You may not use any abusive or inappropriate
+              words, it may lead to a mute</small></td>
+          <td class="p-4">Warning</td>
+          <td class="p-4">Warning</td>
+          <td class="p-4">Mute (3 Days)</td>
+          <td class="p-4">Mute (7 Days)</td>
+          <td class="p-4">Mute (14 Days)</td>
+          <td class="p-4">-</td>
+        </tr>
+        <tr class=" border-b bg-zinc-50 text-black  dark:border-zinc-700">
+          <td class="p-4"><strong>Respect Staff/Members</strong><br><small>You must respect all staff members and the
+              other members</small></td>
+          <td class="p-4">-</td>
+          <td class="p-4">Warning</td>
+          <td class="p-4">Mute (3 Days)</td>
+          <td class="p-4">Mute (7 Days)</td>
+          <td class="p-4">Mute (14 Days)</td>
+          <td class="p-4">-</td>
+        </tr>
+        <tr class=" border-b  text-black  dark:border-zinc-700">
+          <td class="p-4"><strong>Staff Decision</strong><br><small>The staff's decision is the final decision; don’t
+              argue with it.</small></td>
+          <td class="p-4">-</td>
+          <td class="p-4">-</td>
+          <td class="p-4">Warning</td>
+          <td class="p-4">Mute (3 Days)</td>
+          <td class="p-4">Mute (7 Days)</td>
+          <td class="p-4">-</td>
+        </tr>
+        <tr class=" border-b bg-zinc-50 text-black   dark:border-zinc-700">
+          <td class="p-4"><strong>Promotion</strong><br><small>Self-Promotion isn’t allowed</small></td>
+          <td class="p-4">-</td>
+          <td class="p-4">-</td>
+          <td class="p-4">Warning</td>
+          <td class="p-4">Mute (3 Days)</td>
+          <td class="p-4">Mute (7 Days)</td>
+          <td class="p-4">-</td>
+        </tr>
+        <tr class="border-b text-black  dark:border-zinc-700">
+          <td class="p-4"><strong>Promoting via DM</strong><br><small>DM promotion may result in a ban from the Discord
+              server</small></td>
+          <td class="p-4">-</td>
+          <td class="p-4">-</td>
+          <td class="p-4">Warning</td>
+          <td class="p-4">Mute (3 Days)</td>
+          <td class="p-4">Mute (7 Days)</td>
+          <td class="p-4">-</td>
+        </tr>
+        <tr class=" border-b bg-zinc-50 text-black   dark:border-zinc-700">
+          <td class="p-4"><strong>Muted</strong><br><small>If you are muted for any reason, make sure not to rage and
+              instead agree with your mistake</small></td>
+          <td class="p-4">-</td>
+          <td class="p-4">-</td>
+          <td class="p-4">Warning</td>
+          <td class="p-4">Mute (3 Days)</td>
+          <td class="p-4">Mute (7 Days)</td>
+          <td class="p-4">-</td>
+        </tr>
+        <tr class="border-b  text-black  dark:border-zinc-700">
+          <td class="p-4"><strong>No Harassment or Racism</strong><br><small>We don’t accept any racism or
+              harassment</small></td>
+          <td class="p-4">-</td>
+          <td class="p-4">-</td>
+          <td class="p-4">Warning</td>
+          <td class="p-4">Mute (3 Days)</td>
+          <td class="p-4">Mute (7 Days)</td>
+          <td class="p-4">-</td>
+        </tr>
+        <tr class=" border-b bg-zinc-50  text-black   dark:border-zinc-700">
+          <td class="p-4"><strong>Spamming</strong><br><small>Don’t spam in general chats</small></td>
+          <td class="p-4">-</td>
+          <td class="p-4">-</td>
+          <td class="p-4">Warning</td>
+          <td class="p-4">Mute (3 Days)</td>
+          <td class="p-4">Mute (7 Days)</td>
+          <td class="p-4">-</td>
+        </tr>
+        <tr class="border-b text-black  dark:border-zinc-700">
+          <td class="p-4"><strong>Pinging Staff Unnecessarily</strong><br><small>Do not ping any staff unless you have
+              any questions</small></td>
+          <td class="p-4">-</td>
+          <td class="p-4">-</td>
+          <td class="p-4">Warning</td>
+          <td class="p-4">Mute (3 Days)</td>
+          <td class="p-4">Mute (7 Days)</td>
+          <td class="p-4">-</td>
+        </tr>
+        <tr class=" border-b bg-zinc-50 text-black   dark:border-zinc-700">
+          <td class="p-4"><strong>Using Inappropriate PFP</strong><br><small>Do not use any kind of profile picture
+              which is against Discord rules</small></td>
+          <td class="p-4">-</td>
+          <td class="p-4">-</td>
+          <td class="p-4">Warning</td>
+          <td class="p-4">Mute (3 Days)</td>
+          <td class="p-4">Mute (7 Days)</td>
+          <td class="p-4">-</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <!--Rules End -->
+  <!-- FOOTER START -->
+  <div class="bg-zinc-800 text-white p-4">
+    <div class="max-w-6xl mx-auto flex flex-wrap justify-between">
+      <div class="w-full md:w-1/3 p-4">
+        <h2 class="font-bold text-xl mb-4">ABOUT US</h2>
+        <p class="text-zinc-400">
+          NepixMC is one of the Nepali minecraft server , where player can enjoy playing minecraft with friends and meet
+          new people.
+        </p>
+        <p class="mt-4 text-purple-300">Join now: <a href="#">play.nepixmc.fun</a></p>
+      </div>
+      <div class="w-full md:w-1/3 p-4">
+        <h2 class="font-bold text-xl mb-4">SUPPORT US</h2>
+        <p class="text-zinc-400 mb-4">
+          Support us by buing our different product like keys , ranks , coins .
+        </p>
+        <button class="bg-yellow-400 text-zinc-800 px-4 py-2 rounded-lg font-bold"><a href="store.html">Visit
+            Store</a></button>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center border-t border-zinc-700 mt-4 pt-4">
+      <div class="w-full md:w-1/2 text-zinc-400 text-sm">
+        <p>Copyright © Sastopages 2024</p>
+      </div>
+      <div class="w-full md:w-1/2 text-right text-zinc-400 text-sm">
+        <p>DESIGNED BY <span class="font-bold">bhattprayas</span></p>
+      </div>
+    </div>
+  </div>
+  <!-- FOOTER END -->
+  <script>
+    document.getElementById('copyButton').addEventListener('click', function () {
+      var text = document.querySelector('#copyButton span').innerText;
+
+      var textarea = document.createElement('textarea');
+      textarea.value = text;
+      document.body.appendChild(textarea);
+
+      textarea.select();
+
+      document.execCommand('copy');
+
+      document.body.removeChild(textarea);
+
+      alert('Copied to clipboard: ' + text);
+    });
+
+  </script>
+</body>
+
+</html>

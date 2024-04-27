@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .img {
+      width: 400px;
+      height: 400px;
+    }
+
+    #navbar {
+      background-color: #27272A;
+    }
+
+    .topbar {
+        background-color: #3cff00;
+      background-image: url(https://cdn.discordapp.com/attachments/1132702592510742589/1228206682564333598/1695699714965.png?ex=662b339c&is=6618be9c&hm=ff8e06f7428cc17d7cf45a6dfd3d65381766df35ab9ef01e1ff3b1487e5a8bd2&);
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+    }
+
+    #coloryellow{
+        color: yellow;
+    }
+
+  
+
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            background-color: #333;
+            padding-top: 20px;
+        }
+
+        .sidebar h2 {
+            color: white;
+            text-align: center;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .dropbtn {
+            background-color: #444;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .main-content {
+           margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.5s ease;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+        }
+
+        .hide {
+            margin-left: -250px;
+        }
+
+      
+
+       .coin-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .coin-item {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+        }
+
+        .coin-item img {
+            max-width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .coin-item {
+                width: calc(50% - 20px); 
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .coin-item {
+                width: calc(33.33% - 20px);
+            }
+        }
+  </style>
+</head>
+
+<body>
+  <!-- TOP BAR START -->
+  <div class="topbar">
+    <div class="container mx-auto px-4 py-2" id="navbar">
+      <div class="flex justify-between items-center text-white">
+        <div class="flex space-x-4">
+          <button id="copyButton"
+            class="bg-purple-700 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-purple-800 flex items-center">
+            <span>play.nepixmc.fun</span>
+          </button>
+        </div>
+        <button class="bg-yellow-400 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-yellow-500 flex items-center">
+          <span><a href="https://discord.gg/C9SqPBwNus">Join Our Discord</a></span>
+        </button>
+      </div>
+    </div>
+    <div class="container mx-auto px-4 py-2">
+      <div class="flex justify-between items-center">
+        <div class="img"></div>
+      </div>
+    </div>
+    <div class="container mx-auto px-4 py-2" id="navbar">
+        <div class="flex justify-center items-center text-white">
+          <div class="flex space-x-4">
+            <button class="bg-purple-800 py-2 px-4 rounded-lg shadow-lg hover:bg-purple-900"><a
+                href="index.html">Home</a></button>
+            <button class="bg-purple-800 py-2 px-4 rounded-lg shadow-lg hover:bg-purple-900"><a
+                href="vote.html">Vote</a></button>
+                <div class="ml-4"> <!-- Added a margin to create a gap between navbar items and the Store button -->
+                  <button class="bg-yellow-400 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-yellow-500 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h13M3 11h13m-4 4h4" />
+                    </svg>
+                    <span><a href="store.html">Store</a></span>
+                  </button>
+                </div>
+            <button class="bg-purple-800 py-2 px-4 rounded-lg shadow-lg hover:bg-purple-900"><a
+                href="staff.html">Staff</a></button>
+            <button class="bg-purple-800 py-2 px-4 rounded-lg shadow-lg hover:bg-purple-900"><a
+                href="rules.html">Rules</a></button>
+          </div>
+          
+        </div>
+      </div>
+  </div>
+  <!-- TOP BAR END -->
+  
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="dropdown">
+        <button class="dropbtn flex items-center" onclick="toggleDropdown()">
+            Lifesteal
+            <svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 12a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                <path fill-rule="evenodd" d="M10 20a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                <path fill-rule="evenodd" d="M10 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+            </svg>
+        </button>
+                <div class="dropdown-content" id="dropdownContent">
+            <a href="#" onclick="showSection('ranks')">Ranks</a>
+            <a href="#" onclick="showSection('keys')">Keys</a>
+            <a href="#" onclick="showSection('coins')">Coins</a>
+        </div>
+    </div>
+  </div>
+  <!-- End of Sidebar -->
+
+  <div class="main-content" id="main-content">
+    <h2>Welcome to Lifesteal</h2>
+  </div>
+
+  <!-- FOOTER START -->
+  <div class="bg-zinc-800 text-white p-4">
+    <div class="max-w-6xl mx-auto flex flex-wrap justify-between">
+        <div class="w-full md:w-1/3 p-4">
+            <h2 class="font-bold text-xl mb-4">ABOUT US</h2>
+            <p class="text-zinc-400">
+                NepixMC is one of the Nepali minecraft server , where player can enjoy playing minecraft with friends and meet new people.
+            </p>
+            <p class="mt-4 text-purple-300">Join now: <a href="#" >play.nepixmc.fun</a></p>
+        </div>
+        <div class="w-full md:w-1/3 p-4">
+            <h2 class="font-bold text-xl mb-4">SUPPORT US</h2>
+            <p class="text-zinc-400 mb-4">
+               Support us by buing our different product like keys , ranks , coins .
+            </p>
+            <button class="bg-yellow-400 text-zinc-800 px-4 py-2 rounded-lg font-bold"><a href="store.html">Visit Store</a></button>
+        </div>
+    </div>
+    <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center border-t border-zinc-700 mt-4 pt-4">
+        <div class="w-full md:w-1/2 text-zinc-400 text-sm">
+            <p>Copyright © Sastopages 2024</p>
+        </div>
+        <div class="w-full md:w-1/2 text-right text-zinc-400 text-sm">
+            <p>DESIGNED BY <span class="font-bold">bhattprayas</span></p>
+        </div>
+    </div>
+  </div>
+  <!-- FOOTER END -->
+
+  <script>
+    document.getElementById('copyButton').addEventListener('click', function() {
+        var text = document.querySelector('#copyButton span').innerText;
+
+        var textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        
+        textarea.select();
+        
+        document.execCommand('copy');
+        
+        document.body.removeChild(textarea);
+        
+        alert('Copied to clipboard: ' + text);
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+            var lastSection = localStorage.getItem("lastSection");
+            if (lastSection) {
+                showSection(lastSection);
+            }
+        });
+
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("dropdownContent");
+            dropdownContent.classList.toggle("show");
+        }
+
+        function redirectToDiscord() {
+        window.location.href = "https://discord.gg/sRhVZYJWaX";
+    }
+
+        function showSection(section) {
+            event.preventDefault();
+            var mainContent = document.getElementById("main-content");
+            var content = "";
+
+            mainContent.classList.add("hide");
+
+            setTimeout(function () {
+                switch (section) {
+                    case 'coins':
+                        content = `
+                        <h2 style="color: blue; font-weight: bold; font-size: 24px;">COINS</h2>
+                            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="coin-container">
+                <div class="coin-item bg-white rounded-lg shadow p-4">
+                    <img src="asset/img/1k coins.png" alt="1k coins" class="mx-auto">
+                    <h3 class="text-lg font-semibold mt-2">1000 COINS</h3>
+                    <p class="text-zinc-500">1.00 EUR</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <button class="bg-green-500 text-white px-3 py-1 rounded" onclick="redirectToDiscord()">Buy Now</button>
+                    </div>
+
+                </div>
+                <div class="coin-item bg-white rounded-lg shadow p-4">
+                    <img src="asset/img/5k.png" alt="5k coins" class="mx-auto">
+                    <h3 class="text-lg font-semibold mt-2">5000 COINS</h3>
+                    <p class="text-zinc-500">1.00 EUR</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <button class="bg-green-500 text-white px-3 py-1 rounded" onclick="redirectToDiscord()">Buy Now</button>
+                    </div>
+
+                </div>
+                <div class="coin-item bg-white rounded-lg shadow p-4">
+                    <img src="asset/img/10k.png" alt="10k coins" class="mx-auto">
+                    <h3 class="text-lg font-semibold mt-2">10000 COINS</h3>
+                    <p class="text-zinc-500">1.00 EUR</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <button class="bg-green-500 text-white px-3 py-1 rounded" onclick="redirectToDiscord()">Buy Now</button>
+                    </div>
+
+                </div>
+                <div class="coin-item bg-white rounded-lg shadow p-4">
+                    <img src="asset/img/Coins.png" alt="20k coins" class="mx-auto">
+                    <h3 class="text-lg font-semibold mt-2">20000 COINS</h3>
+                    <p class="text-zinc-500">1.00 EUR</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <button class="bg-green-500 text-white px-3 py-1 rounded" onclick="redirectToDiscord()">Buy Now</button>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>`;
+                        break;
+                    case 'ranks':
+                        content = `
+                        <h2 style="color: blue; font-weight: bold; font-size: 24px;">RANKS</h2>
+                            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="coin-container">
+                <div class="coin-item bg-white rounded-lg shadow p-4">
+                    <img src="https://placehold.co/300x200" alt="Dominator Rank" class="mx-auto">
+                    <h3 class="text-lg font-semibold mt-2">Dominator</h3>
+                    <p class="text-zinc-500">1.00 EUR</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <button class="bg-green-500 text-white px-3 py-1 rounded" onclick="redirectToDiscord()">Buy Now</button>
+                    </div>
+
+                </div>
+                <div class="coin-item bg-white rounded-lg shadow p-4">
+                    <img src="https://placehold.co/300x200" alt="Emperor Rank" class="mx-auto">
+                    <h3 class="text-lg font-semibold mt-2">Emperor Rank</h3>
+                    <p class="text-zinc-500">1.00 EUR</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <button class="bg-green-500 text-white px-3 py-1 rounded" onclick="redirectToDiscord()">Buy Now</button>
+                    </div>
+
+                </div>
+                <div class="coin-item bg-white rounded-lg shadow p-4">
+                    <img src="https://placehold.co/300x200" alt="Divine Rank" class="mx-auto">
+                    <h3 class="text-lg font-semibold mt-2">Divine Rank</h3>
+                    <p class="text-zinc-500">1.00 EUR</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <button class="bg-green-500 text-white px-3 py-1 rounded" onclick="redirectToDiscord()">Buy Now</button>
+                    </div>
+
+                </div>
+                <div class="coin-item bg-white rounded-lg shadow p-4">
+                    <img src="https://placehold.co/300x200" alt="Superior Rank" class="mx-auto">
+                    <h3 class="text-lg font-semibold mt-2">Superior Rank</h3>
+                    <p class="text-zinc-500">1.00 EUR</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <button class="bg-green-500 text-white px-3 py-1 rounded" onclick="redirectToDiscord()">Buy Now</button>
+                    </div>
+                </div>                
+            </div>
+        </div>`;
+                        break;
+                    case 'keys':
+                        content = `
+                        <h2 style="color: blue; font-weight: bold; font-size: 24px;">KEYS</h2>
+                            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="coin-container">
+                <div class="coin-item bg-white rounded-lg shadow p-4">
+                    <img src="https://placehold.co/300x200" alt="Bit of Gold" class="mx-auto">
+                    <h3 class="text-lg font-semibold mt-2">80 Gold | Bit of Gold</h3>
+                    <p class="text-zinc-500">1.00 EUR</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <button class="bg-green-500 text-white px-3 py-1 rounded" onclick="redirectToDiscord()">Buy Now</button>
+                    </div>
+
+                </div>
+                <div class="coin-item bg-white rounded-lg shadow p-4">
+                    <img src="https://placehold.co/300x200" alt="Bit of Gold" class="mx-auto">
+                    <h3 class="text-lg font-semibold mt-2">80 Gold | Bit of Gold</h3>
+                    <p class="text-zinc-500">1.00 EUR</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <button class="bg-green-500 text-white px-3 py-1 rounded" onclick="redirectToDiscord()">Buy Now</button>
+                    </div>
+
+                </div>
+                <div class="coin-item bg-white rounded-lg shadow p-4">
+                    <img src="https://placehold.co/300x200" alt="Bit of Gold" class="mx-auto">
+                    <h3 class="text-lg font-semibold mt-2">80 Gold | Bit of Gold</h3>
+                    <p class="text-zinc-500">1.00 EUR</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <button class="bg-green-500 text-white px-3 py-1 rounded" onclick="redirectToDiscord()">Buy Now</button>
+                    </div>
+
+                </div>
+                <div class="coin-item bg-white rounded-lg shadow p-4">
+                    <img src="https://placehold.co/300x200" alt="Bit of Gold" class="mx-auto">
+                    <h3 class="text-lg font-semibold mt-2">80 Gold | Bit of Gold</h3>
+                    <p class="text-zinc-500">1.00 EUR</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <button class="bg-green-500 text-white px-3 py-1 rounded" onclick="redirectToDiscord()">Buy Now</button>
+                    </div>
+
+                </div>
+                <div class="coin-item bg-white rounded-lg shadow p-4">
+                    <img src="https://placehold.co/300x200" alt="Bit of Gold" class="mx-auto">
+                    <h3 class="text-lg font-semibold mt-2">80 Gold | Bit of Gold</h3>
+                    <p class="text-zinc-500">1.00 EUR</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <button class="bg-green-500 text-white px-3 py-1 rounded" onclick="redirectToDiscord()">Buy Now</button>
+                    </div>
+
+                </div>
+                <div class="coin-item bg-white rounded-lg shadow p-4">
+                    <img src="https://placehold.co/300x200" alt="Bit of Gold" class="mx-auto">
+                    <h3 class="text-lg font-semibold mt-2">80 Gold | Bit of Gold</h3>
+                    <p class="text-zinc-500">1.00 EUR</p>
+                    <div class="flex items-center justify-between mt-3">
+                        <button class="bg-green-500 text-white px-3 py-1 rounded" onclick="redirectToDiscord()">Buy Now</button>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>`;
+                        break;
+                
+                   
+                }
+                mainContent.innerHTML = content;
+
+                localStorage.setItem("lastSection", section);
+
+                mainContent.classList.remove("hide");
+            }, 500);
+        }
+  </script>
+</body>
+
+</html>
